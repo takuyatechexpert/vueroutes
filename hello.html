@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <router-link to="/top">Go to Top</router-link>
+    <router-link to="/users">Go to User</router-link>
+    <!-- ルートを設定する際はrouter-linkを使用する to=で書く事 -->
+    <router-view>
+      <!-- この中にrouter-linkで設定したルート先のviewを記述する -->
+    </router-view>
+  </div>
+  
+  
+  <script src="https://unpkg.com/vue@2.6.10"></script>
+  <script src="https://unpkg.com/vue-router@3.0.6"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
