@@ -1,20 +1,11 @@
-const Profile ={
-    template: `
-      <div class="profile">
-        <h2>Profile {{$route.params.userId}}</h2>
-      </div>
-      `}
-const Posts ={
-    template: `
-      <div class="posts">
-        <h2>Posts {{$route.params.userId}}</h2>
-      </div>
-      `}
+const A ={template: '<h2>A</h2>'}
+const B ={template: '<h2>B</h2>'}
 const router = new VueRouter({
   routes:[
     {
       path: '/a',
       // name: 'users',
+      redirect: '/b',
       component: A,
 
     },
