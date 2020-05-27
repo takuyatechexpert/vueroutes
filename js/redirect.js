@@ -5,16 +5,17 @@ const router = new VueRouter({
     {
       path: '/a',
       // redirect: '/b',
-      redirect: {name: 'page-b'},
+      // redirect: {name: 'page-b'},
       // nameにredirectするパターン
       component: A,
-
+      alias: '/b'
+      // エイリアスはurlを変えずに表示する中身だけを置き換える
     },
-    {
-      path: '/b',
-      name: 'page-b',
-      component: B
-    }
+    // {
+    //   path: '/b',
+    //   name: 'page-b',
+    //   component: B
+    // }
   ]
 })
 
