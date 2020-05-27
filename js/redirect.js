@@ -4,14 +4,15 @@ const router = new VueRouter({
   routes:[
     {
       path: '/a',
-      // name: 'users',
-      redirect: '/b',
+      // redirect: '/b',
+      redirect: {name: 'page-b'},
+      // nameにredirectするパターン
       component: A,
 
     },
     {
       path: '/b',
-      // name: 'profile',
+      name: 'page-b',
       component: B
     }
   ]
