@@ -8,8 +8,14 @@
 <body>
   <div id="app">
     <router-link to="/top">Go to Top</router-link>
-    <router-link to="/users">Go to User</router-link>
+    <!-- <router-link to="/users/123">Go to User</router-link> -->
+    <router-link to="/test">Go to test</router-link>
     <!-- ルートを設定する際はrouter-linkを使用する to=で書く事 -->
+    <router-link :to="{name: 'user', params: {userId: 123}}">Go to User</router-link>
+    <!-- routerにnameを指定している場合はnameで指定できる
+    :がつくので注意
+    慣れるまで書くのが大変そうだがURLの変更に強い -->
+    <!-- paramsを使用する場合は明示的に記述が必要 -->
     <router-view>
       <!-- この中にrouter-linkで設定したルート先のviewを記述する -->
     </router-view>
